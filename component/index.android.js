@@ -46,6 +46,10 @@ NotificationsComponent.prototype.cancelAllLocalNotifications = function() {
 	RNPushNotification.cancelAllLocalNotifications();
 };
 
+NotificationsComponent.prototype.removeAllDeliveredNotifications = function() {
+	RNPushNotification.removeAllDeliveredNotifications();
+};
+
 NotificationsComponent.prototype.presentLocalNotification = function(details: Object) {
 	RNPushNotification.presentLocalNotification(details);
 };
