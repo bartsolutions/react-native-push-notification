@@ -19,7 +19,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.core.app.NotificationCompat;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.facebook.react.bridge.ReadableMap;
@@ -569,8 +569,7 @@ public class RNPushNotificationHelper {
             }
         }
 
-        NotificationChannel channel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, this.config.getChannelName() != null ? this.config.getChannelName() : "rn-push-notification-channel", importance);
-
+        NotificationChannel channel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, this.config.getChannelName(), importance);
         channel.setDescription(this.config.getChannelDescription());
         channel.enableLights(true);
         channel.enableVibration(true);
